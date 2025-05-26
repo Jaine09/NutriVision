@@ -1,0 +1,235 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section{
+    background-color: #f0eeee;
+}
+
+#logo {
+    width: 90px;
+    height: 90px;
+}
+
+.navbar {
+    background-color: #f0eeee;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 128px;
+}
+
+.navbar-list {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-item a {
+    font-size: 17px;
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s;
+    cursor: pointer;
+}
+
+.navbar-item a:hover {
+    color: #8bb746;
+}
+
+.navbar-buttons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.navbar-button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Arial', sans-serif;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar-button:first-child {
+    background-color: #5cb85c;
+    color: white;
+    width: 100px;
+}
+
+.navbar-button:first-child:hover {
+    background-color: #549754;
+}
+
+.navbar-button:last-child {
+    width: 120px;
+    height: 40px;
+    background-color: transparent;
+    color: #5cb85c;
+    border: 2px solid #5cb85c;
+}
+
+.navbar-button:last-child:hover {
+    background-color: #549754;
+    color: white;
+}
+
+#inicio {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+#banner-img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    position: absolute;
+}
+
+#sobre {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    text-align: center;
+}
+
+#sobre h1 {
+    font-size: 2.8em;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
+}
+
+#sobre h1::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #4CAF50;
+    margin: 10px auto 0;
+}
+
+#sobre p {
+    font-size: 1.1em;
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: justify;
+}
+
+#sobre strong {
+    display: block;
+    font-size: 1.4em;
+    color: #4CAF50;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* --- */
+
+/* Responsividade */
+
+@media (max-width: 1024px) {
+    .navbar-container {
+        padding: 0 50px;
+    }
+
+    #sobre h1 {
+        font-size: 2.5em;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-container {
+        flex-direction: column;
+        padding: 20px;
+        align-items: flex-start;
+    }
+
+    .navbar-list {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .navbar-item a {
+        display: block;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    .navbar-buttons {
+        width: 100%;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .navbar-button {
+        width: 48%; /* Para ocupar quase metade da largura e ficarem lado a lado */
+    }
+
+    .navbar-button:first-child,
+    .navbar-button:last-child {
+        width: 100%; /* Ajusta para que ocupem a largura total em telas menores */
+    }
+
+    #inicio {
+        height: 400px;
+    }
+
+    #banner-img {
+        height: 400px;
+    }
+
+    #sobre {
+        padding: 40px 15px;
+    }
+
+    #sobre h1 {
+        font-size: 2.2em;
+    }
+
+    #sobre p {
+        font-size: 1em;
+        text-align: left;
+    }
+
+    #sobre strong {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 480px) {
+    #inicio {
+        height: 300px;
+    }
+
+    #banner-img {
+        height: 300px;
+    }
+
+    .navbar-button {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+
+    #logo {
+        width: 70px;
+        height: 70px;
+    }
+}
