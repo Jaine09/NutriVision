@@ -14,47 +14,128 @@
     <nav class="navbar">
         <div class="navbar-container">
             <img src="./assets/img/logoNutriVision.png" alt="Logo NutriVision" id="logo">
-            <ul class="navbar-list">
-                <li class="navbar-item"><a href="">Ínicio</a></li>
+            <ul class="navbar-list" id="navbar-menu">
+                <li class="navbar-item"><a href="#inicio">Início</a></li>
                 <li class="navbar-item"><a href="#sobre">Sobre nós</a></li>
-                <li class="navbar-item"><a href="">Produtos</a></li>
-                <li class="navbar-item"><a href="">O aplicativo</a></li>
-                <li class="navbar-item"><a href="">Contato</a></li>
+                <li class="navbar-item"><a href="#produtos">Produtos</a></li>
+                <li class="navbar-item"><a href="#aplicativo">O aplicativo</a></li>
+                <li class="navbar-item"><a href="#contato">Contato</a></li>
             </ul>
             <div class="navbar-buttons">
                 <button class="navbar-button">Login</button>
                 <button class="navbar-button">Cadastre-se</button>
             </div>
+            <button id="mobile-menu" class="mobile-menu-icon">&#9776;</button>
+        </div>
     </nav>
 
     <section id="inicio">
         <img src="./assets/img/bannerNutriVision.png" alt="Banner NutriVision" id="banner-img">
-        <!-- <div id="banner-content">
-            <h1>NutriVision: Seu Parceiro na Alimentação Saudável</h1>
-            <p>Planos personalizados, acompanhamento profissional e recursos inovadores para você alcançar seus objetivos.</p>
-            <button class="cta-button">Comece Sua Jornada com NutriVision Agora!</button>
-        </div> -->
     </section>
 
     <section id="sobre">
         <h1>Sobre nós</h1>
         <p>Na NutriVision, acreditamos que uma alimentação saudável é a base para uma vida plena. Nosso aplicativo foi
             criado para empoderar você, oferecendo as ferramentas e o conhecimento necessários para tomar as melhores
-            decisões sobre sua dieta.
-
-            Com a NutriVision, você não está sozinho, mas está no comando. Oferecemos planos alimentares 100%
+            decisões sobre sua dieta.</p>
+        <p>Com a NutriVision, você não está sozinho, mas está no comando. Oferecemos planos alimentares 100%
             personalizados, desenvolvidos com base nas suas necessidades e objetivos de saúde – seja você vegano,
-            vegetariano, adepto do low-carb ou tenha qualquer outra preferência.
-
-            Você pode registrar suas refeições diariamente e acompanhar de perto a ingestão de nutrientes e calorias,
+            vegetariano, adepto do low-carb ou tenha qualquer outra preferência.</p>
+        <p>Você pode registrar suas refeições diariamente e acompanhar de perto a ingestão de nutrientes e calorias,
             tudo de forma intuitiva. E para garantir que você esteja sempre no caminho certo, conte com o suporte de
             profissionais especializados em nutrição através de consultas virtuais, mantendo sempre a autonomia em suas
             escolhas.</p>
         <strong>Nossa missão:</strong>
-        <p>auxiliar nossos clientes em relação ao autocuidado e a alimentação saudável, atraindo assim um público que
+        <p>Auxiliar nossos clientes em relação ao autocuidado e à alimentação saudável, atraindo assim um público que
             precisa ou que deseja melhorar sua saúde e tem em vista atender o público-alvo da melhor forma possível.</p>
+    </section>
+
+    <section id="produtos">
+        <h2 class="titulo-slider">Nossos Produtos</h2>
+        <div class="slider-wrapper">
+            <button class="arrow left" id="arrow-left">❮</button>
+            <div class="slider-container" id="slider">
+                <div class="slider">
+                    <div class="card">
+                        <img src="./assets/img/whey1.png" alt="Whey Protein">
+                        <h3>Whey Protein</h3>
+                        <p>Suplemento para ganho de massa muscular.</p>
+                        <button class="comprar-btn">Comprar</button>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/img/creatina1.png" alt="Creatina">
+                        <h3>Creatina</h3>
+                        <p>Aumente sua força e desempenho nos treinos.</p>
+                        <button class="comprar-btn">Comprar</button>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/img/barrinha1.png" alt="Barrinhas Nutritivas">
+                        <h3>Barrinhas Nutritivas</h3>
+                        <p>Lanches saudáveis e práticos para o dia a dia.</p>
+                        <button class="comprar-btn">Comprar</button>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/img/whey2.png" alt="Whey Protein">
+                        <h3>Whey Protein</h3>
+                        <p>Suplemento para ganho de massa muscular.</p>
+                        <button class="comprar-btn">Comprar</button>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/img/creatina2.png" alt="Creatina">
+                        <h3>Creatina</h3>
+                        <p>Aumente sua força e desempenho nos treinos.</p>
+                        <button class="comprar-btn">Comprar</button>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/img/barrinha2.png" alt="Barrinhas Nutritivas">
+                        <h3>Barrinhas Nutritivas</h3>
+                        <p>Lanches saudáveis e práticos para o dia a dia.</p>
+                        <button class="comprar-btn">Comprar</button>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/img/whey3.png" alt="Whey Protein">
+                        <h3>Whey Protein</h3>
+                        <p>Suplemento para ganho de massa muscular.</p>
+                        <button class="comprar-btn">Comprar</button>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/img/creatina3.png" alt="Creatina">
+                        <h3>Creatina</h3>
+                        <p>Aumente sua força e desempenho nos treinos.</p>
+                        <button class="comprar-btn">Comprar</button>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/img/barrinha3.png" alt="Barrinhas Nutritivas">
+                        <h3>Barrinhas Nutritivas</h3>
+                        <p>Lanches saudáveis e práticos para o dia a dia.</p>
+                        <button class="comprar-btn">Comprar</button>
+                    </div>
+                </div>
+            </div>
+            <button class="arrow right" id="arrow-right">❯</button>
+        </div>
+    </section>
+
+    <section id="contato">
+        <h2>Fale Conosco</h2>
+        <p>Tem alguma dúvida, sugestão ou deseja falar com um especialista? Envie uma mensagem!</p>
+        <form class="contato-form" id="form-contato">
+            <input type="text" name="nome" placeholder="Seu nome" required>
+            <input type="email" name="email" placeholder="Seu e-mail" required>
+            <textarea name="mensagem" rows="5" placeholder="Digite sua mensagem aqui..." required></textarea>
+            <button type="submit">Enviar Mensagem</button>
+        </form>
+
+        <!-- Modal de confirmação -->
+        <div id="modal-confirmacao" class="modal">
+            <div class="modal-content">
+                <span class="fechar">&times;</span>
+                <p>Mensagem enviada com sucesso! Entraremos em contato em breve.</p>
+            </div>
+        </div>
     </section>
 
     <script src="script.js" defer></script>
 </body>
+
 </html>
