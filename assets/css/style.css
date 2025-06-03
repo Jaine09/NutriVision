@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-section{
+section {
     background-color: #f0eeee;
 }
 
@@ -14,6 +14,11 @@ section{
 }
 
 .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
     background-color: #f0eeee;
 }
 
@@ -50,7 +55,14 @@ section{
     align-items: center;
 }
 
-.navbar-button {
+.navbar-buttons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+/* Estilo base para todos os botões */
+.navbar-buttons .navbar-button {
     padding: 10px;
     border: none;
     border-radius: 5px;
@@ -60,17 +72,17 @@ section{
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.navbar-button:first-child {
+.navbar-buttons a:first-child .navbar-button {
     background-color: #5cb85c;
     color: white;
     width: 100px;
 }
 
-.navbar-button:first-child:hover {
+.navbar-buttons a:first-child .navbar-button:hover {
     background-color: #549754;
 }
 
-.navbar-button:last-child {
+.navbar-buttons a:last-child .navbar-button {
     width: 120px;
     height: 40px;
     background-color: transparent;
@@ -78,12 +90,13 @@ section{
     border: 2px solid #5cb85c;
 }
 
-.navbar-button:last-child:hover {
+.navbar-buttons a:last-child .navbar-button:hover {
     background-color: #549754;
     color: white;
 }
 
 #inicio {
+    margin-top: 90px;
     position: relative;
     width: 100%;
     height: 500px;
@@ -169,7 +182,7 @@ section{
     flex: 0 0 300px;
     background-color: white;
     border-radius: 15px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
     text-align: center;
     scroll-snap-align: center;
@@ -213,6 +226,7 @@ section{
 .slider-container::-webkit-scrollbar {
     height: 10px;
 }
+
 .slider-container::-webkit-scrollbar-thumb {
     background-color: #ccc;
     border-radius: 5px;
@@ -328,7 +342,7 @@ section{
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 .modal-content {
@@ -352,101 +366,45 @@ section{
     color: black;
 }
 
-
-#mobile-menu{
-    display: none;
-}
-/* Responsividade */
-
-@media (max-width: 1024px) {
-    .navbar-container {
-        padding: 0 50px;
-    }
-
-    #sobre h1 {
-        font-size: 2.5em;
-    }
+footer {
+    background-color: #f1f1f1;
+    padding: 20px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    font-family: Arial, sans-serif;
+    gap: 20px;
 }
 
-@media (max-width: 768px) {
-    .navbar-container {
-        flex-direction: column;
-        padding: 20px;
-        align-items: flex-start;
-    }
-
-    .navbar-list {
-        flex-direction: column;
-        gap: 10px;
-        width: 100%;
-        margin-top: 20px;
-    }
-
-    .navbar-item a {
-        display: block;
-        padding: 10px 0;
-        text-align: center;
-    }
-
-    .navbar-buttons {
-        width: 100%;
-        justify-content: center;
-        margin-top: 20px;
-    }
-
-    .navbar-button {
-        width: 48%; /* Para ocupar quase metade da largura e ficarem lado a lado */
-    }
-
-    .navbar-button:first-child,
-    .navbar-button:last-child {
-        width: 100%; /* Ajusta para que ocupem a largura total em telas menores */
-    }
-
-    #inicio {
-        height: 400px;
-    }
-
-    #banner-img {
-        height: 400px;
-    }
-
-    #sobre {
-        padding: 40px 15px;
-    }
-
-    #sobre h1 {
-        font-size: 2.2em;
-    }
-
-    #sobre p {
-        font-size: 1em;
-        text-align: left;
-    }
-
-    #sobre strong {
-        font-size: 1.2em;
-    }
+.footer-left {
+    font-size: 14px;
+    color: #333;
+    flex: 1 1 200px;
 }
 
-@media (max-width: 480px) {
-    #inicio {
-        height: 300px;
-    }
+.footer-right {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    flex: 1 1 200px;
+    justify-content: flex-end;
+}
 
-    #banner-img {
-        height: 300px;
-    }
+.footer-right a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+}
 
-    .navbar-button {
-        padding: 8px 15px;
-        font-size: 0.9em;
-    }
+.footer-right a:hover {
+    text-decoration: underline;
+}
 
-    #logo {
-        width: 70px;
-        height: 70px;
-    }
+#logoFooter {
+    width: 120px;
+    height: auto;
+    flex: 0 0 auto;
 }
 
 .slider-dots {
@@ -469,27 +427,193 @@ section{
     background-color: #5cb85c;
 }
 
-/* RESPONSIVIDADE DOS DOTS */
-@media (max-width: 768px) {
-    .slider-dots {
-        gap: 6px;
-        margin-top: 16px;
-    }
-
-    .slider-dots .dot {
-        width: 10px;
-        height: 10px;
-    }
+.img-hamburger {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
 }
 
-@media (max-width: 480px) {
-    .slider-dots {
-        gap: 5px;
-        margin-top: 14px;
+.mobile-menu-icon {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #333;
+}
+
+/* Estilo para o login */
+
+.cadastrar{
+    display: none;
+    margin-top: 200px;
+    height: 50vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.login{
+    margin-top: 200px;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-container, .cadastrar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(217, 234, 215);
+    height: 50vh;
+    width: 30vw;
+    border-radius: 5px;
+}
+
+.login-container h2, .cadastrar-container h2 {
+    font-size: 2em;
+    color: #265026;
+    margin-bottom: 5px;
+}
+
+.login-container h3 {
+    font-size: 1.2em;
+    color: #265026;
+    margin-bottom: 20px;
+}
+
+.login-form, .cadastrar-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.login-form input, .cadastrar-form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 0.9em;
+}
+
+.login-form button, .cadastrar-form button {
+    background-color: #5cb85c;
+    color: white;
+    width: 50%;
+    border: none;
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-form button:hover, .cadastrar-form button:hover {
+    background-color: #4cae4c;
+}
+
+.login-form span, .cadastrar-form span {
+    text-decoration: none;
+    color: #265026;
+    font-size: 0.9em;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .navbar-container {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0 20px;
     }
 
-    .slider-dots .dot {
-        width: 8px;
-        height: 8px;
+    .img-hamburger {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .mobile-menu-icon {
+        display: block;
+    }
+
+    .navbar-list,
+    .navbar-buttons {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #f0eeee;
+        gap: 10px;
+        padding: 10px 0;
+    }
+
+    .navbar-list.active,
+    .navbar-buttons.active {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .navbar-button {
+        width: 100%;
+    }
+
+    #banner-img,
+    #inicio {
+        height: 300px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    #sobre h1,
+    .titulo-slider,
+    #contato h2 {
+        font-size: 2em;
+    }
+
+    #sobre p,
+    #contato p {
+        font-size: 1em;
+        padding: 0 10px;
+    }
+
+    .card {
+        flex: 0 0 250px;
+        margin: 0 auto;
+    }
+
+    .slider-container {
+        padding: 10px;
+        overflow-x: scroll;
+    }
+
+    .login-container, .cadastrar-container {
+        width: 100vw;
+        height: 90vh;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    #logoFooter {
+        width: 100px;
+        margin-bottom: 10px;
+    }
+
+    .footer-left,
+    .footer-right {
+        flex: 1 1 100%;
+        justify-content: center;
+    }
+
+    .footer-right {
+        gap: 10px;
+        margin-top: 10px;
     }
 }

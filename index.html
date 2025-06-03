@@ -13,20 +13,25 @@
 <body>
     <nav class="navbar">
         <div class="navbar-container">
-            <img src="./assets/img/logoNutriVision.png" alt="Logo NutriVision" id="logo">
+
+            <div class="img-hamburger">
+                <img src="./assets/img/logoNutriVision.png" alt="Logo NutriVision" id="logo">
+                <button id="mobile-menu" class="mobile-menu-icon">&#9776;</button>
+            </div>
+
             <ul class="navbar-list" id="navbar-menu">
                 <li class="navbar-item"><a href="#inicio">Início</a></li>
                 <li class="navbar-item"><a href="#sobre">Sobre nós</a></li>
                 <li class="navbar-item"><a href="#produtos">Produtos</a></li>
-                <li class="navbar-item"><a href="#aplicativo">O aplicativo</a></li>
+                <li class="navbar-item"><a href="#planos">Planos</a></li>
                 <li class="navbar-item"><a href="#contato">Contato</a></li>
             </ul>
             <div class="navbar-buttons">
-                <button class="navbar-button">Login</button>
-                <button class="navbar-button">Cadastre-se</button>
+                <a href="/pages/entrar.html"><button class="navbar-button">Entrar</button></a>
+                <a id="cadastrarBtn" href="/pages/entrar.html?form=cadastrar"><button class="navbar-button">Cadastre-se</button></a>
             </div>
-            <button id="mobile-menu" class="mobile-menu-icon">&#9776;</button>
         </div>
+
     </nav>
 
     <section id="inicio">
@@ -134,6 +139,18 @@
             </div>
         </div>
     </section>
+
+    <footer>
+        <div class="footer-left">
+            &copy; 2025 NutriVision. Todos os direitos reservados.
+        </div>
+        <img id="logoFooter" src="./assets/img/logoNutriVision.png" alt="Logo NutriVision">
+        <div class="footer-right">
+            <a href="/sobre">Sobre</a>
+            <a href="/contato">Contato</a>
+            <a href="/privacidade">Privacidade</a>
+        </div>
+    </footer>
 
     <script src="script.js" defer></script>
 </body>

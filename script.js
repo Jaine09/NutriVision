@@ -1,59 +1,81 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const mobileMenu = document.getElementById('mobile-menu');
-    const navbarMenu = document.getElementById('navbar-menu');
+    // MENU MOBILE
+    const hamburger = document.getElementById('mobile-menu');
+    const navbarList = document.querySelector('.navbar-list');
+    const navbarButtons = document.querySelector('.navbar-buttons');
 
-    if (mobileMenu && navbarMenu) {
-        mobileMenu.addEventListener('click', function () {
-            navbarMenu.classList.toggle('active');
-        });
+    hamburger.addEventListener('click', () => {
+        navbarList.classList.toggle('active');
+        navbarButtons.classList.toggle('active');
+    });
 
-        const navLinks = document.querySelectorAll('.navbar-item a');
-        navLinks.forEach(link => {
-            link.addEventListener('click', function () {
-                if (navbarMenu.classList.contains('active')) {
-                    navbarMenu.classList.remove('active');
-                }
-            });
-        });
-    }
-
-    // Slider com setas e indicadores
+    // SLIDER COM SETAS
     const slider = document.getElementById('slider');
     const leftArrow = document.getElementById('arrow-left');
     const rightArrow = document.getElementById('arrow-right');
 
-    let scrollAmount = 0;
     const cardWidth = 320; // largura do card + margem
 
-    rightArrow.addEventListener('click', () => {
+    rightArrow?.addEventListener('click', () => {
         slider.scrollBy({ left: cardWidth, behavior: 'smooth' });
     });
 
-    leftArrow.addEventListener('click', () => {
+    leftArrow?.addEventListener('click', () => {
         slider.scrollBy({ left: -cardWidth, behavior: 'smooth' });
     });
 
+    // FORMULÁRIO + MODAL
     const form = document.getElementById('form-contato');
     const modal = document.getElementById('modal-confirmacao');
     const closeBtn = document.querySelector('.fechar');
 
-    form.addEventListener('submit', function (e) {
-        e.preventDefault();
+    if (form && modal && closeBtn) {
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
 
-        // Simula envio com um delay
-        setTimeout(() => {
-            form.reset();
-            modal.style.display = 'block';
-        }, 500);
-    });
+            setTimeout(() => {
+                form.reset();
+                modal.style.display = 'block';
+            }, 500);
+        });
 
-    closeBtn.onclick = () => {
-        modal.style.display = "none";
-    };
-
-    window.onclick = (event) => {
-        if (event.target === modal) {
+        closeBtn.onclick = () => {
             modal.style.display = "none";
+        };
+
+        window.onclick = (event) => {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        };
+    }
+
+    // TROCA ENTRE LOGIN E CADASTRO
+    const entrar = document.getElementById('login');
+    const cadastrar = document.getElementById('cadastrar');
+    const cadastroLink = document.getElementById('spanCadastro');
+    const entrarLink = document.getElementById('spanLogin');
+
+    if (entrar && cadastrar) {
+        const params = new URLSearchParams(window.location.search);
+        const formParam = params.get('form');
+
+        if (formParam === 'cadastrar') {
+            cadastrar.style.display = 'flex';
+            entrar.style.display = 'none';
+        } else {
+            entrar.style.display = 'flex';
+            cadastrar.style.display = 'none';
         }
-    };
+
+        cadastroLink?.addEventListener('click', () => {
+            cadastrar.style.display = 'flex';
+            entrar.style.display = 'none';
+        });
+
+        entrarLink?.addEventListener('click', () => {
+            entrar.style.display = 'flex';
+            cadastrar.style.display = 'none';
+        });
+    }
 });
