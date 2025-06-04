@@ -50,32 +50,4 @@ document.addEventListener('DOMContentLoaded', function () {
         };
     }
 
-    // TROCA ENTRE LOGIN E CADASTRO
-    const entrar = document.getElementById('login');
-    const cadastrar = document.getElementById('cadastrar');
-    const cadastroLink = document.getElementById('spanCadastro');
-    const entrarLink = document.getElementById('spanLogin');
-
-    if (entrar && cadastrar) {
-        const params = new URLSearchParams(window.location.search);
-        const formParam = params.get('form');
-
-        if (formParam === 'cadastrar') {
-            cadastrar.style.display = 'flex';
-            entrar.style.display = 'none';
-        } else {
-            entrar.style.display = 'flex';
-            cadastrar.style.display = 'none';
-        }
-
-        cadastroLink?.addEventListener('click', () => {
-            cadastrar.style.display = 'flex';
-            entrar.style.display = 'none';
-        });
-
-        entrarLink?.addEventListener('click', () => {
-            entrar.style.display = 'flex';
-            cadastrar.style.display = 'none';
-        });
-    }
 });

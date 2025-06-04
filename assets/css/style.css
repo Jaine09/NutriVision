@@ -445,15 +445,8 @@ footer {
 
 /* Estilo para o login */
 
-.cadastrar{
-    display: none;
-    margin-top: 200px;
-    height: 50vh;
-    align-items: center;
-    justify-content: center;
-}
 
-.login{
+.login, .cadastrar{
     margin-top: 200px;
     height: 50vh;
     display: flex;
@@ -515,7 +508,7 @@ footer {
     background-color: #4cae4c;
 }
 
-.login-form span, .cadastrar-form span {
+.login-form a, .cadastrar-form a {
     text-decoration: none;
     color: #265026;
     font-size: 0.9em;

@@ -1,15 +1,14 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Entrar - NutriVision</title>
+    <title>Cadastre-se NutriVision</title>
 
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="shortcut icon" href="../assets/img/logoNutriVision.png" type="image/x-icon">
-</head>
 
+</head>
 <body>
     <nav class="navbar">
         <div class="navbar-container">
@@ -29,22 +28,19 @@
 
         </div>
     </nav>
-
-    <div class="login" id="login">
-        <div class="login-container">
-            <h2>Seja bem-vindo(a)</h2>
-            <h3>Faça o seu login</h3>
-            <form class="login-form" id="form-login">
+    <div class="cadastrar" id="cadastrar">
+        <div class="cadastrar-container">
+            <h2>Cadastre-se</h2>
+            <form class="cadastrar-form" id="form-cadastrar">
+                <input type="text" name="nome" placeholder="Seu nome" required>
                 <input type="email" name="email" placeholder="Seu e-mail" required>
                 <input type="password" name="senha" placeholder="Sua senha" required>
-                <p>Esqueceu sua senha? <a href="#">Clique aqui</a></p>
-                <p>Não tem uma conta? <a href="./cadastrar.html">Cadastre-se</a></p>
-                <button type="submit">Entrar</button>
+                <p>Já tem uma conta? <a href="./entrar.html">Entre aqui</a></p>
+                <button type="submit">Cadastrar</button>
             </form>
         </div>
     </div>
 
     <script src="../script.js" defer></script>
 </body>
-
 </html>
