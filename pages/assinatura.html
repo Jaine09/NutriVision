@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assinatura - NutriVision</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="shortcut icon" href="../assets/img/logoNutriVision.png" type="image/x-icon">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+
+            <div class="img-hamburger">
+                <img src="../assets/img/logoNutriVision.png" alt="Logo NutriVision" id="logo">
+                <button id="mobile-menu" class="mobile-menu-icon">&#9776;</button>
+            </div>
+
+            <ul class="navbar-list" id="navbar-menu">
+                <li class="navbar-item"><a href="../index.html#inicio">Início</a></li>
+                <li class="navbar-item"><a href="../index.html#sobre">Sobre nós</a></li>
+                <li class="navbar-item"><a href="../index.html#produtos">Produtos</a></li>
+                <li class="navbar-item"><a href="../index.html#planos">Plano</a></li>
+                <li class="navbar-item"><a href="../index.html#contato">Contato</a></li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <div class="assinatura">
+            <div class="subscription-steps-container">
+                <h4>Conclua sua assinatura</h4>
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+                <div class="steps-wrapper">
+                    <div class="step active" data-step="1">
+                        <h3>Seus Dados</h3>
+                        <p>Preencha suas informações pessoais.</p>
+                        <form action="" class="form-information">
+                            <div class="information-group">
+                            <input type="text" id="nomeCompleto" placeholder="Nome Completo" required>
+                            <span class="mensagem"></span>
+                            <input type="email" id="email" placeholder="Email" required>
+                            <span class="mensagem"></span>
+                            <input type="tel" id="telefone" placeholder="Telefone" required>
+                            <span class="mensagem"></span>
+                        </div>
+
+                            <div class="information-group">
+                                <input type="text" id="cep" placeholder="CEP" onblur="maskCep()" required>
+                                <span class="mensagem"></span>
+                                <input type="text" id="endereco" placeholder="Endereço" required>
+                                <input type="text" id="cidade" placeholder="Cidade" required>
+                                <input type="text" id="estado" placeholder="Estado" required>
+                                <input type="number" id="numero" placeholder="Número">
+                            </div>
+                        </form>
+                        <button onclick="nextStep()">Próximo</button>
+                    </div>
+                    <div class="step" data-step="2">
+                        <h3>Sobre seu plano</h3> <br>
+                        <h2>Plano Elite</h2>
+                        <ul>
+                            <li>Teleconsulta com psicólogo 1 vez por semana.</li>
+                            <li>Teleconsulta com nutricionista 1 vez por mês.</li>
+                            <li>Teleconsulta com personal trainer 3 vezes na semana.</li>
+                            <li>Dicas nutricionais personalizadas.</li>
+                        </ul>
+                        <button onclick="prevStep()">Anterior</button>
+                        <button onclick="nextStep()">Próximo</button>
+                    </div>
+                    <div class="step" data-step="3">
+                        <h3>Pagamento</h3>
+                        <p>Informe seus dados de pagamento.</p>
+                        <form action="" class="form-information">
+                            <div class="information-group">
+                                <input type="text" id="numeroCartao" placeholder="Número do Cartão" required>
+                                <span class="mensagem"></span>
+                                <input type="text" id="nomeCartao" placeholder="Nome no Cartão" required>
+                                <span class="mensagem"></span>
+                                <input type="text" id="dataValidade" placeholder="Data de Validade (MM/AA)" required>
+                                <span class="mensagem"></span>
+                                <input type="text" id="cvv" placeholder="CVV" required>
+                                <span class="mensagem"></span>
+                                <div class="select-wrapper">
+                                    <select name="parcelas" id="parcelas">
+                                        <option value="" disabled selected>Selecione o número de parcelas</option>
+                                        <option value="1">1x à vista: R$ 499,99</option>
+                                        <option value="2">2x sem juros: R$ 249,99 por parcela</option>
+                                    <option value="3">3x sem juros: R$ 166,66 por parcela</option>
+                                    <option value="4">4x sem juros: R$ 124,99 por parcela</option>
+                                    <option value="5">5x sem juros: R$ 99,99 por parcela</option>
+                                    <option value="6">6x sem juros: R$ 83,33 por parcela</option>
+                                </select>
+                            </div>
+                        </form>
+                        <button onclick="prevStep()">Anterior</button>
+                        <button onclick="nextStep()">Próximo</button>
+                    </div>
+                    <div class="step" data-step="4">
+                        <h3>Confirmação</h3>
+                        <p>Revise e confirme sua assinatura.</p>
+
+                        <p>Nome: <span id="confirm-name"></span></p>
+                        <p>Email: <span id="confirm-email"></span></p>
+                        <p>Telefone: <span id="confirm-phone"></span></p>
+                        <p>Endereço: <span id="confirm-address"></span></p>
+                        <br>
+                        <p>Plano: <span id="confirm-plan">Plano Elite</span></p>
+                        <p>Cartão: <span id="confirm-card"></span></p>
+                        <p>Parcelas: <span id="confirm-installments"></span></p>
+
+                        <button onclick="prevStep()">Anterior</button>
+                        <button onclick="completeSubscription()">Concluir</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <script src="../script.js"></script>
+</body>
+
+</html>
