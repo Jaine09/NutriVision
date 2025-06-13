@@ -1,0 +1,134 @@
+@media (max-width: 768px) {
+    .navbar-container {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0 20px;
+    }
+
+    .img-hamburger {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .mobile-menu-icon {
+        display: block;
+    }
+
+    .navbar-list,
+    .navbar-buttons {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #f3feed;
+        gap: 10px;
+        padding: 10px 0;
+    }
+
+    .navbar-list.active,
+    .navbar-buttons.active {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .navbar-button {
+        width: 100%;
+        text-align: center;
+    }
+
+    #banner-img,
+    #inicio {
+        height: 250px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    #sobre h1,
+    .titulo-slider,
+    #contato h2 {
+        font-size: 1.8em;
+        text-align: center;
+    }
+
+    #sobre p,
+    #contato p {
+        font-size: 1em;
+        padding: 0 15px;
+        text-align: justify;
+    }
+
+    .card {
+        flex: 0 0 250px;
+        margin: 10px auto;
+    }
+
+    .slider-container {
+        padding: 10px;
+        overflow-x: auto;
+        display: flex;
+        gap: 15px;
+    }
+
+    .login-container,
+    .cadastrar-container {
+        width: 100vw;
+        height: auto;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .plano {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    /* Adicional: melhora o layout do passo a passo do formulário */
+    .step-content {
+        padding: 20px 10px;
+    }
+
+    .step-title {
+        font-size: 1.5em;
+        text-align: center;
+    }
+
+    .form-group {
+        width: 100%;
+    }
+
+    #tipoPagamento option{
+        font-size: small;
+    }
+
+    .modal-content {
+        width: 90%;
+        margin: 30% auto;
+        padding: 20px;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    #logoFooter {
+        width: 100px;
+        margin-bottom: 10px;
+    }
+
+    .footer-left,
+    .footer-right {
+        flex: 1 1 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer-right {
+        gap: 10px;
+        margin-top: 10px;
+    }
+}

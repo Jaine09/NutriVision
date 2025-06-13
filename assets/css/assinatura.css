@@ -1,0 +1,267 @@
+.assinatura {
+    margin-top: 150px;
+    margin-bottom: 100px;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.subscription-steps-container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.subscription-steps-container h4 {
+    font-size: 1.5em;
+    color: #408e1e;
+    margin-bottom: 20px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.progress-fill {
+    height: 100%;
+    width: 0%;
+    background-color: #007bff;
+    border-radius: 4px;
+    transition: width 0.4s ease-in-out;
+}
+
+.steps-wrapper {
+    display: flex;
+    transition: transform 0.4s ease-in-out;
+}
+
+.step {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 0 10px;
+    text-align: left;
+    display: none;
+}
+
+.step.active {
+    display: block;
+}
+
+.step h3 {
+    color: #333;
+    margin-top: 0;
+}
+
+.step p {
+    color: #555;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.select-wrapper {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.select-wrapper select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 100%;
+    padding: 12px 15px;
+    padding-right: 40px;
+    font-size: 16px;
+    font-family: inherit;
+    color: #333;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    cursor: pointer;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    box-sizing: border-box;
+}
+
+.select-wrapper select:hover {
+    border-color: #999;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.select-wrapper select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+.select-wrapper::after {
+    content: '▼';
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    font-size: 12px;
+    color: #555;
+    pointer-events: none;
+    transition: color 0.3s ease;
+}
+
+.select-wrapper:hover::after,
+.select-wrapper select:focus + .select-wrapper::after {
+    color: #007bff;
+}
+
+.step button {
+    background-color: #549754;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 10px 5px 0 5px;
+    transition: background-color 0.3s ease;
+    min-width: 100px;
+}
+
+.step button:hover {
+    background-color: #219150;
+}
+
+.step button:first-of-type[onclick="prevStep()"] {
+    background-color: #6c757d;
+}
+
+.step button:first-of-type[onclick="prevStep()"]:hover {
+    background-color: #5a6268;
+}
+
+.step button[onclick="completeSubscription()"] {
+    background-color: #28a745;
+}
+
+.step button[onclick="completeSubscription()"]:hover {
+    background-color: #218838;
+}
+
+.form-information {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.form-information input {
+    width: 100%;
+    margin: 5px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 0.9em;
+    box-sizing: border-box;
+}
+
+.confirm-section {
+    background-color: #f8f8f8;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    border-left: 5px solid #28a745;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.confirm-section h4 {
+    color: #408e1e;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.confirm-section p {
+    margin: 4px 0;
+    color: #333;
+    font-size: 0.95rem;
+}
+
+.confirm-section button {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    padding: 6px 14px;
+    font-size: 0.85rem;
+    border-radius: 4px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.confirm-section button:hover {
+    background-color: #5a6268;
+}
+
+.mensagem {
+    color: red;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+#tipoPagamento {
+    display: block;
+}
+
+#parcelas-wrapper {
+    display: none;
+}
+
+/* Modal de Sucesso */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 30px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal-content h2 {
+  color: #28a745;
+  margin-bottom: 15px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

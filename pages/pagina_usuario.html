@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="stylesheet" href="../assets/css/pagina_usuario.css">
+   <link rel="stylesheet" href="../assets/css/responsividade.css">
+   <link rel="shortcut icon" href="../assets/img/logoNutriVision.png" type="image/x-icon">
+  <title>Chat Profissionais - NutriVision</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+
+            <div class="img-hamburger">
+                <img src="../assets/img/logoNutriVision.png" alt="Logo NutriVision" id="logo">
+                <button id="mobile-menu" class="mobile-menu-icon">&#9776;</button>
+            </div>
+
+            <ul class="navbar-list" id="navbar-menu">
+                <li class="navbar-item"><a href="../index.html#inicio">Início</a></li>
+                <li class="navbar-item"><a href="../index.html#sobre">Sobre nós</a></li>
+                <li class="navbar-item"><a href="../index.html#produtos">Produtos</a></li>
+                <li class="navbar-item"><a href="../index.html#planos">Planos</a></li>
+                <li class="navbar-item"><a href="../index.html#contato">Contato</a></li>
+            </ul>
+
+        </div>
+    </nav>
+
+  <div class="container">
+    <div class="sidebar">
+      <h2>Contatos</h2>
+      <ul>
+        <li onclick="abrirChat('nutri')">
+          <img src="../assets/img/avatar-nutri.jpg" alt="Nutricionista" />
+          Nutricionista
+        </li>
+        <li onclick="abrirChat('personal')">
+          <img src="../assets/img/avatar-personal.jpg" alt="Personal" />
+          Personal Trainer
+        </li>
+        <li onclick="abrirChat('psicologa')">
+          <img src="../assets/img/avatar-psicologa.jpg" alt="Psicóloga" />
+          Psicóloga
+        </li>
+      </ul>
+    </div>
+
+    <div class="chat">
+      <!-- Cabeçalho com título e ícones -->
+      <div class="chat-cabecalho">
+        <div class="chat-titulo-com-icones">
+          <h2 id="chat-titulo">Selecione um contato</h2>
+          <div class="chat-acoes">
+            <button class="icone-verde" title="Ligação"><img src="../assets/img/icon_ligacao.png" alt="Ligação"></button>
+            <button class="icone-verde" title="Chamada de vídeo"><img src="../assets/img/icon_chamadaVideo.png" alt="Chamada de Vídeo"></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mensagens -->
+      <div id="chat-mensagens" class="mensagens"></div>
+
+      <!-- Entrada -->
+      <div class="entrada">
+        <input type="text" id="input-mensagem" placeholder="Digite sua mensagem..." />
+        <button onclick="enviarMensagem()">Enviar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
+  <script src="../assets/js/pagina_usuario.js" defer></script>
+</body>
+
+</html>

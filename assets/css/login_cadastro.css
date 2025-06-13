@@ -1,0 +1,68 @@
+.login, .cadastrar{
+    margin-top: 200px;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-container, .cadastrar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(217, 234, 215);
+    height: 60vh;
+    width: 30vw;
+    border-radius: 5px;
+}
+
+.login-container h2, .cadastrar-container h2 {
+    font-size: 2em;
+    color: #408e1e;
+    margin-bottom: 5px;
+}
+
+.login-container h3 {
+    font-size: 1.2em;
+    color: #408e1e;
+    margin-bottom: 20px;
+}
+
+.login-form, .cadastrar-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.login-form input, .cadastrar-form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 0.9em;
+}
+
+.login-form button, .cadastrar-form button {
+    background-color: #5cb85c;
+    color: white;
+    width: 50%;
+    border: none;
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-form button:hover, .cadastrar-form button:hover {
+    background-color: #4cae4c;
+}
+
+.login-form a, .cadastrar-form a {
+    text-decoration: none;
+    color: #265026;
+    font-size: 0.9em;
+    cursor: pointer;
+}

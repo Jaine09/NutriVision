@@ -7,6 +7,8 @@
     <title>Entrar - NutriVision</title>
 
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/login_cadastro.css">
+    <link rel="stylesheet" href="../assets/css/responsividade.css">
     <link rel="shortcut icon" href="../assets/img/logoNutriVision.png" type="image/x-icon">
 </head>
 
@@ -35,16 +37,18 @@
             <h2>Seja bem-vindo(a)</h2>
             <h3>Faça o seu login</h3>
             <form class="login-form" id="form-login">
-                <input type="email" name="email" placeholder="Seu e-mail" required>
-                <input type="password" name="senha" placeholder="Sua senha" required>
+                <input type="email" id="emailLogin" placeholder="Seu e-mail ou cpf" required>
+                <input type="password" id="senhaLogin" placeholder="Sua senha" required>
                 <p>Esqueceu sua senha? <a href="#">Clique aqui</a></p>
                 <p>Não tem uma conta? <a href="./cadastrar.html">Cadastre-se</a></p>
-                <button type="submit">Entrar</button>
+                <span id="mensagemErroLogin"></span>
+                <button type="submit" onclick="realizarLogin(event)">Entrar</button>
             </form>
         </div>
     </div>
 
-    <script src="../script.js" defer></script>
+    <script src="../assets/js/script.js" defer></script>
+    <script src="../assets/js/cadastro_login.js" defer></script>
 </body>
 
 </html>

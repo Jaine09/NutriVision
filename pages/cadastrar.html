@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastre-se NutriVision</title>
 
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/login_cadastro.css">
+    <link rel="stylesheet" href="../assets/css/responsividade.css">
     <link rel="shortcut icon" href="../assets/img/logoNutriVision.png" type="image/x-icon">
 
 </head>
@@ -31,16 +33,20 @@
     <div class="cadastrar" id="cadastrar">
         <div class="cadastrar-container">
             <h2>Cadastre-se</h2>
+            <p>Crie sua conta para realizar a assinatura</p>
             <form class="cadastrar-form" id="form-cadastrar">
-                <input type="text" name="nome" placeholder="Seu nome" required>
-                <input type="email" name="email" placeholder="Seu e-mail" required>
-                <input type="password" name="senha" placeholder="Sua senha" required>
-                <p>Já tem uma conta? <a href="./entrar.html">Entre aqui</a></p>
-                <button type="submit">Cadastrar</button>
+                <input type="text" name="nome" id="nomeCadastro" placeholder="Seu nome" required>
+                <input type="email" name="email" id="emailCadastro" placeholder="Seu e-mail" required>
+                <input type="txt" name="cadastro" id="cpfCadastro" placeholder="Digite seu cpf" required>
+                <input type="password" name="senha" id="senhaCadastro" placeholder="Sua senha" required>
+                <p>Já possui assinatura? <a href="./entrar.html">Entre aqui</a></p>
+                <span id="mensagemErro"></span>
+                <button type="submit" onclick="realizarAssinatura(event)">Cadastrar</button>
             </form>
         </div>
     </div>
 
-    <script src="../script.js" defer></script>
+    <script src="../assets/js/script.js" defer></script>
+    <script src="../assets/js/cadastro_login.js" defer></script>
 </body>
 </html>
