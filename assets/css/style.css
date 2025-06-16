@@ -555,3 +555,68 @@ footer {
     height: auto;
     flex: 0 0 auto;
 }
+
+#modal-pagamento {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0; top: 0;
+  width: 100vw; height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+#form-pagamento input[type="text"]{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 5px 0;
+}
+
+#form-pagamento input[type="radio"] {
+  margin-right: 5px;
+  align-items: center;
+  justify-content: center;
+}
+
+#form-pagamento button {
+  background-color: #5cb85c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.fechar-pagamento {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 26px;
+  font-weight: bold;
+  color: #555;
+  cursor: pointer;
+}
+
+.fechar_pagamento:hover {
+  color: red;
+}

@@ -12,7 +12,7 @@
 .navbar {
     position: static;
     width: 100%;
-    background-color: #edfef2;
+    background-color: #f3feed;
 }
 
 .navbar-container {
@@ -112,9 +112,9 @@
 
 .sidebar {
     width: 250px;
-    background: #3c8f71;
+    background: #edfef2;/*#3c8f71;*/
     border-right: solid 2px black;
-    color: white;
+    color: black;
     padding: 20px;
 }
 
@@ -128,7 +128,7 @@
 
 .sidebar li {
     padding: 10px;
-    background: #41a07e;
+    background: #bff8d0; /*#41a07e;*/
     margin-bottom: 10px;
     cursor: pointer;
     border-radius: 5px;
@@ -145,7 +145,7 @@
 }
 
 .sidebar li:hover {
-    background: #39b689;
+    background: #87f0a6; /*#39b689;*/
 }
 
 .chat {
@@ -159,7 +159,7 @@
 
 /* Cabeçalho do chat com título + ícones */
 .chat-cabecalho {
-    background-color: #3c8f71;
+    background-color: #edfef2; /* #3c8f71; */
     padding: 15px 20px;
     position: sticky;
     top: 0;
@@ -181,7 +181,7 @@
     font-size: 18px;
     margin: 0;
     font-weight: 700;
-    color: white;
+    color: black;
 }
 
 .chat-acoes {

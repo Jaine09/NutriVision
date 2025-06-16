@@ -218,6 +218,26 @@
         </div>
     </section>
 
+    <!-- Modal de Pagamento -->
+    <div id="modal-pagamento" class="modal">
+        <div class="modal-content">
+            <span class="fechar" id="fechar-pagamento">&times;</span>
+            <h2>Finalizar Compra</h2>
+            <div id="produto-selecionado" style="margin: 20px 0;"></div>
+            <form id="form-pagamento">
+                <h3>Escolha a forma de pagamento:</h3>
+                <label><input type="radio" name="pagamento" value="pix" required> PIX </label><br>
+                <label><input type="radio" name="pagamento" value="cartao"> Cartão de Crédito</label><br>
+                <label><input type="radio" name="pagamento" value="boleto"> Boleto</label><br>
+
+                <div id="detalhes-pagamento" style="margin: 20px 0;"></div>
+
+                <button type="submit">Pagar</button>
+            </form>
+            <p id="mensagem-final" style="margin-top: 20px; color: green;"></p>
+        </div>
+    </div>
+
     <footer>
         <div class="footer-left">
             &copy; 2025 NutriVision. Todos os direitos reservados.
