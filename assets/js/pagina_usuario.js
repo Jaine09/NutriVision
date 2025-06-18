@@ -116,143 +116,193 @@ function enviarDicaLink(contato, tema) {
   if (contato === "nutri") {
     switch (tema) {
       case "emagrecer":
-        resposta = "Ótimo! Aqui vai uma dica: Evite alimentos ultraprocessados e mantenha um déficit calórico moderado.\n" +
-                  "Veja mais em: https://www.saude.gov.br/saude-de-a-z/emagrecimento";
+        resposta = "Entendido! Uma dica importante: mantenha um déficit calórico leve e evite ultraprocessados.\n" +
+                   "Dá uma olhadinha aqui:\n https://www.smartfit.com.br/news/nutricao/dicas-de-uma-nutricionista-para-emagrecer-de-vez/";
         break;
       case "dieta":
-        resposta = "Perfeito! Priorize alimentos frescos e varie as cores no prato para garantir nutrientes.\n" +
-                  "Mais informações: https://www.minhavida.com.br/alimentacao/tudo-sobre/45263-dieta-equilibrada";
+        resposta = "Uma alimentação equilibrada é a base de tudo! Priorize variedade e alimentos naturais.\n" +
+                   "Mais detalhes:\n https://www.tuasaude.com/dieta-para-emagrecer/";
         break;
       case "cardapio":
-        resposta = "Legal! Comer de 3 em 3 horas ajuda a manter o metabolismo ativo.\n" +
-                  "Confira sugestões em: https://www.tuasaude.com/cardapio-semanal-saudavel/";
+        resposta = "Legal! Um cardápio saudável pode te dar mais energia e disposição ao longo do dia.\n" +
+                   "Veja algumas ideias:\n https://www.lowcucar.com.br/cardapio-para-alimentacao-saudavel-monte-o-seu?srsltid=AfmBOoqJH2PwAPQ3WDC1iBcURmohl8LnTa07XFo4_2PflLNb--dPhXRF";
         break;
       case "receitas":
-        resposta = "Ótima escolha! Use temperos naturais como ervas e especiarias para dar sabor sem excesso de sódio.\n" +
-                  "Veja receitas aqui: https://www.panelinha.com.br/receita/Receitas-saudaveis";
+        resposta = "Receitas práticas e saudáveis podem transformar a sua rotina.\n" +
+                   "Aqui tem várias opções:\n https://www.tudogostoso.com.br/noticias/receitas-fitness-a5188.html";
         break;
       case "exercicios":
-        resposta = "Excelente! Sempre faça alongamento antes e depois dos exercícios.\n" +
-                  "Dicas em: https://www.cbf.com.br/a-cbf/exercicios-para-emagrecer";
+        resposta = "Atividade física e alimentação andam de mãos dadas! Comece com caminhadas e vá evoluindo.\n" +
+                   "Confira algumas sugestões:\n https://drpauloklein.com.br/blog/a-importancia-da-alimentacao-saudavel-e-atividade-fisica";
+        break;
+      case "hidratação":
+        resposta = "Beber água com regularidade ajuda até no processo de emagrecimento!\n" +
+                   "Veja mais sobre isso:\n https://www.tuasaude.com/beber-agua/";
+        break;
+      case "intestino":
+        resposta = "Um intestino saudável começa com fibras, água e bons hábitos.\n" +
+                   "Dicas aqui: https://www.tuasaude.com/como-regular-o-intestino/";
         break;
       default:
-        resposta = "Aqui está uma dica útil para você!";
+        resposta = "Aqui está uma dica útil pra sua saúde e bem-estar!";
     }
   } else if (contato === "personal") {
     switch (tema) {
       case "treino":
-        resposta = "Ótimo! Para treinos eficazes, mantenha uma rotina variada com exercícios de força e cardio.\n" +
-                  "Confira dicas: https://www.tuasaude.com/exercicios-fisicos/";
+        resposta = "Ótimo! Alternar cardio com treino de força é uma excelente estratégia.\n" +
+                   "Veja mais:\n https://www.tuasaude.com/exercicios-com-halteres/";
         break;
       case "musculação":
-        resposta = "Perfeito! A musculação deve ser feita com carga progressiva para melhores resultados.\n" +
-                  "Saiba mais: https://www.muscleandfitness.com.br/musculacao/";
+        resposta = "Musculação é ótimo para o corpo e mente! Vá no seu ritmo, respeitando seus limites.\n" +
+                   "Veja aqui:\n https://blog.maxtitanium.com.br/treino-musculacao-tabela/";
         break;
       case "alongamento":
-        resposta = "Alongamento é essencial para prevenir lesões e melhorar a flexibilidade.\n" +
-                  "Veja técnicas aqui: https://www.minhavida.com.br/fitness/materias/16668-alongamento-beneficios";
+        resposta = "Alongar-se melhora sua postura e evita lesões.\n" +
+                   "Confira algumas técnicas:\n https://www.bp.org.br/artigo/alongamentos-antes-do-treino-exercicios-pre-academia";
         break;
       case "descanso":
-        resposta = "O descanso é tão importante quanto o treino para a recuperação muscular.\n" +
-                  "Mais informações: https://www.tuasaude.com/descanso-apos-treino/";
+        resposta = "Seu corpo precisa descansar para crescer. Dormir bem também é parte do treino!\n" +
+                   "Saiba mais:\n https://gauchazh.clicrbs.com.br/donna/fitness/noticia/2023/12/por-que-o-descanso-e-importante-para-o-ganho-de-massa-muscular-clq43zq2t002y016xd4opiro4.html";
+        break;
+      case "aquecimento":
+        resposta = "Nunca pule o aquecimento! Ele prepara seu corpo e evita lesões.\n" +
+                   "Dicas aqui:\n https://www.terra.com.br/vida-e-estilo/saude/exercicios-de-aquecimento-melhores-para-fazer-antes-da-musculacao,8c3becbdee835399d9282e776744df10u925wirq.html";
         break;
       default:
-        resposta = "Aqui está uma dica para melhorar seu treino!";
+        resposta = "Aqui vai uma dica para turbinar seu desempenho!";
     }
   } else if (contato === "psicologa") {
     switch (tema) {
       case "ansiedade":
-        resposta = "Ótimo! Técnicas de respiração e mindfulness ajudam a controlar a ansiedade.\n" +
-                  "Confira aqui: https://www.minhavida.com.br/saude/temas/ansiedade";
+        resposta = "Respirar com calma, prestar atenção ao agora... essas práticas ajudam bastante.\n" +
+                   "Dá uma olhada:\n https://vidasaudavel.einstein.br/ansiedade/";
         break;
       case "depressao":
-        resposta = "Perfeito! Terapia e exercícios físicos são aliados no tratamento da depressão.\n" +
-                  "Saiba mais: https://www.saude.gov.br/saude-de-a-z/depressao";
+        resposta = "A depressão precisa de cuidado e acolhimento. Não se isole. Conversar já é um grande passo.\n" +
+                   "Mais informações:\n https://vidasaudavel.einstein.br/depressao-10-fatos-que-voce-precisa-conhecer-sobre-o-transtorno/";
         break;
       case "estresse":
-        resposta = "Controlar o estresse envolve gestão do tempo e momentos de lazer.\n" +
-                  "Veja dicas: https://www.tuasaude.com/estresse/";
+        resposta = "O estresse é sinal de sobrecarga. Respire, se permita descansar.\n" +
+                   "Veja mais:\n https://vidasaudavel.einstein.br/sintomas-de-estresse/";
         break;
       case "sono":
-        resposta = "Ter uma boa qualidade de sono é fundamental para a saúde mental.\n" +
-                  "Mais detalhes: https://www.minhavida.com.br/saude/temas/sono";
+        resposta = "Dormir bem muda tudo! Uma rotina regular faz toda a diferença.\n" +
+                   "Entenda melhor:\n https://institutodosono.com/artigos-noticias/o-papel-vital-do-sono-para-o-funcionamento-do-organismo/";
+        break;
+      case "triste":
+      case "tristeza":
+        resposta = "Sentir tristeza é humano. Permita-se sentir, mas não carregue isso sozinho.\n" +
+                   "Sugestões aqui:\n https://www.einstein.br/n/glossario-de-saude/tristeza-profunda";
+        break;
+      case "autoestima":
+        resposta = "Autoestima se constrói com carinho por você mesma, dia após dia.\n" +
+                   "Leia mais:\n https://www.psicologossaopaulo.com.br/blog/autoestima-o-que-e-como-definir/";
+        break;
+      case "relacionamentos":
+        resposta = "Relacionamentos saudáveis exigem empatia e comunicação. Não tenha medo de impor limites.\n" +
+                   "Saiba mais:\n https://www.significados.com.br/relacionamento/";
         break;
       default:
-        resposta = "Aqui está uma dica que pode ajudar você!";
+        resposta = "Aqui está uma dica que pode te ajudar nesse momento.";
     }
   }
 
-  return resposta + "\n\nPosso ajudar em algo mais?";
+  return resposta + "\n\nPosso te ajudar com mais alguma coisa?";
 }
+
 
 function responderNutri(texto) {
   let resposta = "";
   if (texto.includes("emagrecer")) {
-    resposta = "Para emagrecer com saúde, foque em alimentos naturais e mantenha uma rotina equilibrada. Quer dicas? (sim/não)";
+    resposta = "Entendi! Emagrecer com saúde é possível, sim. Quer uma dica que pode te ajudar a começar? (sim/não)";
     aguardandoConfirmacao = "emagrecer";
   } else if (texto.includes("dieta") || texto.includes("alimentação")) {
-    resposta = "Uma boa dieta inclui equilíbrio entre vegetais, proteínas e carboidratos complexos. Quer um exemplo de cardápio diário? (sim/não)";
+    resposta = "Uma alimentação equilibrada faz toda a diferença no bem-estar. Posso te sugerir um exemplo de como organizar isso? (sim/não)";
     aguardandoConfirmacao = "dieta";
   } else if (texto.includes("cardápio")) {
-    resposta = "Claro! Posso sugerir um cardápio saudável. Quer? (sim/não)";
+    resposta = "Legal! Um cardápio bem montado deixa a rotina mais prática e saudável. Quer uma sugestão? (sim/não)";
     aguardandoConfirmacao = "cardapio";
   } else if (texto.includes("receitas")) {
-    resposta = "Quer receitas saudáveis e rápidas? (sim/não)";
+    resposta = "Que delícia! Tenho algumas receitas saudáveis e fáceis de fazer. Posso te enviar? (sim/não)";
     aguardandoConfirmacao = "receitas";
   } else if (texto.includes("exercícios") || texto.includes("exercicios")) {
-    resposta = "Exercícios ajudam muito no emagrecimento. Quer dicas de como combinar com alimentação? (sim/não)";
+    resposta = "Combinar exercício com boa alimentação é uma ótima estratégia! Quer saber como equilibrar os dois? (sim/não)";
     aguardandoConfirmacao = "exercicios";
-  } else if (texto.includes("obrigado") || texto.includes("valeu") || texto.includes("obrigada")) {
-    resposta = "De nada! Sempre que precisar, estarei aqui para ajudar. Cuide bem da sua saúde!";
+  } else if (texto.includes("água") || texto.includes("hidratação")) {
+    resposta = "Beber água é essencial! Quer entender melhor por que isso ajuda até no emagrecimento? (sim/não)";
+    aguardandoConfirmacao = "hidratação";
+  } else if (texto.includes("intestino") || texto.includes("prisão de ventre")) {
+    resposta = "Seu intestino anda preguiçoso? Uma boa alimentação pode ajudar muito! Quer algumas dicas? (sim/não)";
+    aguardandoConfirmacao = "intestino";
+  } else if (texto.includes("obrigado") || texto.includes("valeu") || texto.includes("obrigada") || texto.includes("não")) {
+    resposta = "Imagina! Estou sempre por aqui se precisar de mais alguma orientação. Cuide-se!";
   } else {
-    resposta = "Olá! Sou a Dra. Mayara, nutricionista. Como posso te ajudar hoje?";
+    resposta = "Oi! Sou a Dra. Mayara, nutricionista. Você quer ajuda com algo específico como alimentação, emagrecimento ou receitas?";
   }
   return resposta;
 }
+
 
 function responderPersonal(texto) {
   let resposta = "";
   if (texto.includes("treino") || texto.includes("exercício") || texto.includes("exercicio")) {
-    resposta = "Para um treino eficaz, é importante variar exercícios de força e cardio. Quer dicas? (sim/não)";
+    resposta = "Treinar com constância é o segredo! Quer que eu te envie uma dica para variar seu treino? (sim/não)";
     aguardandoConfirmacao = "treino";
   } else if (texto.includes("musculação")) {
-    resposta = "A musculação deve ser feita com carga progressiva para melhores resultados. Quer saber mais? (sim/não)";
+    resposta = "A musculação fortalece corpo e mente! Quer saber como começar ou progredir com segurança? (sim/não)";
     aguardandoConfirmacao = "musculação";
   } else if (texto.includes("alongamento")) {
-    resposta = "Alongamento previne lesões e melhora flexibilidade. Quer dicas? (sim/não)";
+    resposta = "Alongar antes e depois do treino evita lesões e melhora o rendimento. Posso te mostrar como? (sim/não)";
     aguardandoConfirmacao = "alongamento";
   } else if (texto.includes("descanso")) {
-    resposta = "O descanso é essencial para recuperação muscular. Quer dicas? (sim/não)";
+    resposta = "Descansar também faz parte do treino! Seu corpo precisa desse tempo pra evoluir. Quer entender melhor? (sim/não)";
     aguardandoConfirmacao = "descanso";
-  } else if (texto.includes("obrigado") || texto.includes("valeu") || texto.includes("obrigada")) {
-    resposta = "De nada! Continue firme no treino!";
+  } else if (texto.includes("aquecimento")) {
+    resposta = "Aquecimento é essencial para preparar o corpo. Quer algumas ideias simples pra começar? (sim/não)";
+    aguardandoConfirmacao = "aquecimento";
+  } else if (texto.includes("cansaço") || texto.includes("motivar") || texto.includes("desanimado") || texto.includes("desmotivada")) {
+    resposta = "Sei como é difícil manter a motivação às vezes. Quer algumas dicas pra retomar o foco com leveza? (sim/não)";
+    aguardandoConfirmacao = "motivacao";
+  } else if (texto.includes("obrigado") || texto.includes("valeu") || texto.includes("obrigada") || texto.includes("não")) {
+    resposta = "Disponha! Continue firme, um passo de cada vez já é progresso.";
   } else {
-    resposta = "Olá! Sou o seu Personal Trainer. Como posso ajudar no seu treino hoje?";
+    resposta = "Oi! Sou seu Personal Trainer. Me conta: quer ajuda com treinos, alongamentos ou como manter a motivação?";
   }
   return resposta;
 }
 
+
 function responderPsicologa(texto) {
   let resposta = "";
   if (texto.includes("ansiedade")) {
-    resposta = "Técnicas de respiração e mindfulness ajudam a controlar a ansiedade. Quer dicas? (sim/não)";
+    resposta = "A ansiedade pode ser difícil de lidar, mas você não está sozinha. Quer conhecer algumas técnicas que podem ajudar? (sim/não)";
     aguardandoConfirmacao = "ansiedade";
   } else if (texto.includes("depressão") || texto.includes("depressao")) {
-    resposta = "Terapia e exercícios físicos são aliados no tratamento da depressão. Quer saber mais? (sim/não)";
+    resposta = "É importante falar sobre isso. Posso compartilhar algumas formas de buscar apoio e cuidar da saúde emocional? (sim/não)";
     aguardandoConfirmacao = "depressao";
   } else if (texto.includes("estresse")) {
-    resposta = "Gestão do tempo e lazer ajudam a controlar o estresse. Quer dicas? (sim/não)";
+    resposta = "O estresse pode se acumular silenciosamente. Posso te dar dicas de como aliviar um pouco essa carga? (sim/não)";
     aguardandoConfirmacao = "estresse";
   } else if (texto.includes("sono")) {
-    resposta = "Ter uma boa qualidade de sono é fundamental para saúde mental. Quer saber mais? (sim/não)";
+    resposta = "Dormir bem é essencial para o equilíbrio emocional. Quer que eu te envie sugestões para melhorar a qualidade do sono? (sim/não)";
     aguardandoConfirmacao = "sono";
-  } else if (texto.includes("obrigado") || texto.includes("valeu") || texto.includes("obrigada")) {
-    resposta = "De nada! Estou aqui para apoiar você sempre que precisar.";
+  } else if (texto.includes("triste") || texto.includes("tristeza")) {
+    resposta = "É natural se sentir triste às vezes. Posso te sugerir formas de cuidar de você nesse momento? (sim/não)";
+    aguardandoConfirmacao = "triste";
+  } else if (texto.includes("autoestima")) {
+    resposta = "A autoestima se constrói com gentileza e paciência. Quer algumas dicas pra se cuidar com mais carinho? (sim/não)";
+    aguardandoConfirmacao = "autoestima";
+  } else if (texto.includes("relacionamento") || texto.includes("relacionamentos")) {
+    resposta = "Relacionamentos podem ser desafiadores. Quer conversar sobre como manter relações mais saudáveis? (sim/não)";
+    aguardandoConfirmacao = "relacionamentos";
+  } else if (texto.includes("obrigado") || texto.includes("valeu") || texto.includes("obrigada") || texto.includes("não")) {
+    resposta = "Fico feliz em ajudar. Se precisar conversar novamente, estou aqui.";
   } else {
-    resposta = "Olá! Sou a psicóloga aqui para ajudar. Sobre o que gostaria de conversar hoje?";
+    resposta = "Oi! Sou a psicóloga aqui do time. Você quer conversar sobre algo específico como ansiedade, autoestima ou relações?";
   }
   return resposta;
 }
+
 
 async function chamarChatSimulado(pergunta, contato) {
   return responderMensagem(contato, pergunta);

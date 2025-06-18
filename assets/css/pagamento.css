@@ -1,0 +1,344 @@
+.container {
+    margin: 100px auto;
+    max-width: 100vw;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px #ccc;
+    display: block;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.carrinho-container {
+    display: flex;
+}
+
+h1 {
+    text-align: center;
+    color: darkgreen;
+}
+
+.produto-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.produto-card img {
+    width: 100px;
+}
+
+.info-produto {
+    font-size: 14px;
+}
+
+.estoque {
+    color: green;
+    font-size: 13px;
+}
+
+.tabela {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.tabela th,
+.tabela td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+
+.tabela th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.tabela td {
+    vertical-align: middle;
+}
+
+.tabela .preco-final {
+    font-size: 16px;
+}
+
+#remover{
+    border: none;
+}
+
+.btnRemover {
+    background-color: rgba(245, 56, 56, 0.719);
+    border: 1px solid black;
+    color: black;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    height: 40px;
+    width: 70px;
+    border-radius: 5px;
+}
+
+#total-geral{
+    display: block;
+    text-align: right; 
+    margin-right: 18%;
+    font-weight: bold; 
+    margin-top: 20px;
+    white-space: nowrap;
+    color: darkgreen;
+    border: none;
+}
+
+.quantidade {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.quantidade button {
+    width: 25px;
+    height: 25px;
+}
+
+.quantidade input {
+    width: 30px;
+    text-align: center;
+    border: none;
+}
+
+.preco-final {
+    color: green;
+    font-weight: bold;
+}
+
+#qrcode {
+    width: 20%;
+    height: 20%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+#boleto{
+    margin-top: 10px;
+    height: 40px;
+    width: 100px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #5be898;
+    color: black;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+#boleto:hover {
+    background-color: #46b978;
+    color: white;
+}
+
+.informacoes-finais{
+    display: flex;
+    margin: 10px 50px;
+}
+
+.entrega {
+    margin-top: 20px;
+    margin-left: 250px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.entrega label {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 15px;
+    color: #333;
+}
+
+.entregaFrete input{
+    width: 100%; 
+    padding: 8px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    height: 40px;
+}
+
+.entrega button{
+    padding: 8px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    height: 40px;
+    background-color: #5be898;
+    color: black;
+    font-weight: bold;
+    width: 30%;
+    cursor: pointer;
+}
+
+.entregaFrete{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.frete {
+    color: green;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.cupom {
+    margin-left: 50px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.aplicar-cupom {
+    display: flex;
+    gap: 10px;
+}
+
+.aplicar-cupom p{
+    font-weight: bold;
+    font-size: 15px;
+    color: #333;
+}
+
+.aplicar-cupom input {
+    width: 50%; 
+    padding: 8px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    height: 40px;
+}
+
+.aplicar-cupom button {
+    padding: 8px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    height: 40px;
+    background-color: #5be898;
+    color: black;
+    font-weight: bold;
+    width: 30%;
+    cursor: pointer;
+}
+
+.forma-pagamento{
+    margin: 20px 0;
+    text-align: center;
+    font-size: 18px;
+}
+
+.forma-pagamento select{
+    width: 20%;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#comprar-mais{
+    text-decoration: none;
+    color:#28a745;
+}
+
+#comprar-mais:hover {
+    color: #218838;
+}
+
+.finalizar-compra{
+    display: block;
+    margin-top: 40px;
+}
+
+.finalizar {
+    width: 40%;
+    background: #46b978;
+    border-radius: 10px;
+    color: white;
+    padding: 15px;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-left: 30%;
+}
+
+.finalizar:hover{
+    background: #28a745;
+}
+
+#detalhes-pagamento {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+#detalhes-pagamento input{
+    display: block;
+    width: 50%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+}
+
+.modal-content button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: none;
+    background-color: #46b978;
+    color: white;
+    cursor: pointer;
+}
+
+.modal-content h2{
+    margin-bottom: 20px;
+    color: darkgreen;
+}
+
+.modal-content #modal-produto, .modal-content #modal-valor{
+    font-size: 15px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+}

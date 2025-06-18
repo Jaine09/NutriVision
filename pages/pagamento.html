@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento - NutriVision</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/pagamento.css">
+    <link rel="stylesheet" href="../assets/css/responsividade.css">
+    <link rel="icon" type="image/x-icon" href="../assets/img/logoNutriVision.png">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+
+            <div class="img-hamburger">
+                <img src="../assets/img/logoNutriVision.png" alt="Logo NutriVision" id="logo">
+                <button id="mobile-menu" class="mobile-menu-icon">&#9776;</button>
+            </div>
+
+            <ul class="navbar-list" id="navbar-menu">
+                <li class="navbar-item"><a href="../index.html#inicio">Início</a></li>
+                <li class="navbar-item"><a href="../index.html#sobre">Sobre nós</a></li>
+                <li class="navbar-item"><a href="../index.html#produtos">Produtos</a></li>
+                <li class="navbar-item"><a href="../index.html#planos">Planos</a></li>
+                <li class="navbar-item"><a href="../index.html#contato">Contato</a></li>
+            </ul>
+            <div class="navbar-buttons">
+                <a href="./entrar.html"><button class="navbar-button">Entrar</button></a>
+                <a id="cadastrarBtn" href="./cadastrar.html"><button class="navbar-button">Assinar</button></a>
+            </div>
+
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="carrinho-container">
+            <div class="produto-card">
+            </div>
+
+            <table class="tabela">
+                <thead>
+
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+            <span id="total-geral"></span>
+        </div>
+
+        <div class="informacoes-finais">
+            <div class="entrega">
+                <label for="cep">Entrega: </label>
+                <div class="entregaFrete">
+                    <input type="text" id="cep" placeholder="Digite seu CEP">
+                    <p class="frete">🚚 Frete Grátis</p>
+                </div>
+                <button id="calcular">Calcular</button>
+
+            </div>
+
+            <div class="cupom">
+                <div class="aplicar-cupom">
+                    <p>Aplicar código de cupom</p>
+                    <input type="text" placeholder="Digite o cupom">
+                    <button>Aplicar</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="forma-pagamento">
+            <label for="pagamento">Forma de pagamento:</label>
+            <select id="pagamento">
+                <option value="" disabled selected>Selecione uma opção</option>
+                <option value="credito">Cartão de Crédito </option>
+                <option value="debito">Cartão de Débito</option>
+                <option value="pix">PIX </option>
+                <option value="boleto">Boleto</option>
+            </select>
+        </div>
+
+        <!-- Campos específicos de pagamento -->
+        <div id="detalhes-pagamento"></div>
+
+        <a href="../index.html#produtos" id="comprar-mais" class="finalizar-compra">Comprar mais produtos</a>
+        <button class="finalizar finalizar-compra">Finalizar compra</button>
+        
+    </div>
+
+    <div id="modal-confirmacao" class="modal">
+        <div class="modal-content">
+            <h2>Compra realizada com sucesso!</h2>
+            <p id="modal-produto"></p>
+            <p id="modal-valor"></p>
+            <button onclick="fecharModal()">Fechar</button>
+        </div>
+    </div>
+
+
+    <script src="../assets/js/script.js" defer></script>
+    <script src="../assets/js/pagamento.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
+
+</body>
+
+</html>

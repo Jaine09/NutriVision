@@ -50,113 +50,41 @@ document.addEventListener('DOMContentLoaded', function () {
         };
     }
 
-    const botoesComprar = document.querySelectorAll('.comprar-btn');
-    const modalPagamento = document.getElementById('modal-pagamento');
-    const fecharPagamento = document.getElementById('fechar-pagamento');
-    const produtoSelecionado = document.getElementById('produto-selecionado');
-    const detalhesPagamento = document.getElementById('detalhes-pagamento');
-    const formPagamento = document.getElementById('form-pagamento');
-    const mensagemFinal = document.getElementById('mensagem-final');
+    const comprarBtns = document.querySelectorAll('.comprar-btn');
 
-    botoesComprar.forEach(botao => {
-        botao.addEventListener('click', (e) => {
-            const card = e.target.closest('.card');
-            const img = card.querySelector('img');
-            const src = img.getAttribute('src');
+    comprarBtns.forEach(btn => {
+    btn.addEventListener('click', function () {
+        const card = this.closest('.card');
+        const id = card.dataset.id; // Pegamos o ID do produto
+        const img = card.querySelector('img').getAttribute('src');
+        const nome = card.querySelector('h4').textContent.trim();
 
-            produtoSelecionado.innerHTML = `<img src="${src}" alt="Produto selecionado" style="width:100%; max-height: 200px; object-fit: contain;">`;
-            modalPagamento.style.display = 'flex';
-        });
-    });
+        let precoText = card.querySelector('p').textContent;
+        precoText = precoText.replace(/[^\d,.-]+/g, '').replace(',', '.');
+        const preco = parseFloat(precoText);
 
-    fecharPagamento.onclick = () => {
-        modalPagamento.style.display = 'none';
-        detalhesPagamento.innerHTML = '';
-        formPagamento.reset();
-        mensagemFinal.textContent = '';
-    };
+        let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
 
-    window.addEventListener('click', (e) => {
-        if (e.target === modalPagamento) {
-            modalPagamento.style.display = 'none';
-            detalhesPagamento.innerHTML = '';
-            formPagamento.reset();
-            mensagemFinal.textContent = '';
+        // Verifica se o produto já existe no carrinho pelo ID
+        const produtoExistente = carrinho.find(p => p.id === id);
+
+        if (produtoExistente) {
+            produtoExistente.quantidade = (produtoExistente.quantidade || 1) + 1;
+        } else {
+            carrinho.push({
+                id,
+                img,
+                nome,
+                preco,
+            });
         }
-    });
 
-    formPagamento.addEventListener('change', (e) => {
-        if (e.target.name === 'pagamento') {
-            const metodo = e.target.value;
-            detalhesPagamento.innerHTML = '';
+        localStorage.setItem('carrinho', JSON.stringify(carrinho));
 
-            if (metodo === 'pix') {
-                detalhesPagamento.innerHTML = `<p><strong>Chave PIX:</strong> nutri@vision.com.br</p><img src="./assets/img/qrcode_pix_ficticio.png" alt="QR Code PIX" style="width: 150px;">`;
-            } else if (metodo === 'boleto') {
-                detalhesPagamento.innerHTML = `<p>Linha digitável: <strong>34191.79001 01043.510047 91020.150008 5 12345678900000</strong></p>`;
-            } else if (metodo === 'cartao') {
-                detalhesPagamento.innerHTML = `
-          <input type="text" placeholder="Número do Cartão" required>
-          <input type="text" placeholder="Validade (MM/AA)" required>
-          <input type="text" placeholder="CVV" required>
-          <select required>
-            <option disabled selected>Parcelamento</option>
-            <option value="1">1x sem juros</option>
-            <option value="2">2x sem juros</option>
-            <option value="3">3x sem juros</option>
-          </select>
-        `;
-                aplicarMascaraCartao(document.getElementById('numero-cartao'));
-                aplicarMascaraValidade(document.getElementById('validade-cartao'));
-                aplicarMascaraCVV(document.getElementById('cvv-cartao'));
-            }
-        }
+        window.location.href = 'pages/pagamento.html?id=' + encodeURIComponent(id) +
+            '&img=' + encodeURIComponent(img) +
+            '&nome=' + encodeURIComponent(nome) +
+            '&preco=' + encodeURIComponent(preco);
     });
-
-    formPagamento.addEventListener('submit', (e) => {
-        e.preventDefault();
-        mensagemFinal.textContent = 'Pagamento realizado com sucesso!';
-        formPagamento.reset();
-        detalhesPagamento.innerHTML = '';
-        setTimeout(() => {
-            modalPagamento.style.display = 'none';
-            mensagemFinal.textContent = '';
-        }, 3000);
-    });
+})
 });
-
-function aplicarMascaraCartao(input) {
-    input.addEventListener('input', () => {
-        let value = input.value.replace(/\D/g, '').slice(0, 16);
-        value = value.replace(/(\d{4})(?=\d)/g, '$1 ');
-        input.value = value;
-    });
-}
-
-function aplicarMascaraValidade(input) {
-    input.addEventListener('input', () => {
-        let value = input.value.replace(/\D/g, '').slice(0, 4);
-        if (value.length >= 3) {
-            value = value.replace(/(\d{2})(\d{1,2})/, '$1/$2');
-        }
-        input.value = value;
-    });
-}
-
-function aplicarMascaraCVV(input) {
-    input.addEventListener('input', () => {
-        input.value = input.value.replace(/\D/g, '').slice(0, 3);
-    });
-}
-
-function aplicarMascaraAgencia(input) {
-    input.addEventListener('input', () => {
-        input.value = input.value.replace(/\D/g, '').slice(0, 4);
-    });
-}
-
-function aplicarMascaraConta(input) {
-    input.addEventListener('input', () => {
-        input.value = input.value.replace(/\D/g, '').slice(0, 8);
-    });
-}

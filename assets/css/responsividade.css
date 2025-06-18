@@ -139,7 +139,7 @@
     }
 
     /* >>> CHATBOT <<< */
-   .container {
+    .container {
         flex-direction: row;
         flex-wrap: nowrap;
         overflow-x: auto;
@@ -184,6 +184,123 @@
     .sidebar li img {
         width: 28px;
         height: 28px;
+    }
+
+    .container {
+        padding: 15px;
+        box-shadow: none;
+    }
+
+    .carrinho-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .produto-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .produto-card img {
+        width: 80px;
+    }
+
+    .tabela {
+        font-size: 20px;
+    }
+
+    .quantidade {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .quantidade button,
+    .quantidade input {
+        width: 30px;
+        height: 30px;
+    }
+
+    #total-geral {
+        text-align: center;
+        margin-right: 0;
+        margin-top: 0;
+    }
+
+    .informacoes-finais {
+        flex-direction: column;
+        margin: 0;
+        align-items: center;
+    }
+
+    .entrega {
+        flex-direction: column;
+        margin-left: 0;
+        margin-top: 0;
+        width: 100%;
+        align-items: center;
+    }
+
+    .entrega label {
+        margin-top: 10px;
+        font-weight: bold;
+        font-size: 16px;
+        color: #333;
+    }
+
+    .entregaFrete input,
+    .entrega button,
+    .aplicar-cupom input,
+    .aplicar-cupom button {
+        width: 100%;
+    }
+
+    .cupom {
+        flex-direction: column;
+        margin-left: 0;
+        width: 100%;
+        align-items: center;
+    }
+
+    .aplicar-cupom {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .aplicar-cupom p {
+        font-size: 16px;
+    }
+
+    .forma-pagamento select {
+        width: 100%;
+    }
+
+    input.quantidade-zero {
+        color: red;
+        font-weight: bold;
+    }
+
+    .btnRemover {
+        display: none;
+    }
+
+    .finalizar {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    #detalhes-pagamento input {
+        width: 100%;
+    }
+
+    select option {
+        font-size: 13px;
+    }
+
+    .modal-content {
+        width: 95%;
     }
 }
 
@@ -291,5 +408,160 @@
     #banner-img,
     #inicio {
         height: 220px;
+    }
+
+    .container {
+        padding: 10px;
+        margin: 100px 0 0 0;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    .produto-card {
+        gap: 10px;
+    }
+
+    .produto-card img {
+        width: 100px;
+    }
+
+    .info-produto {
+        font-size: 17px;
+    }
+
+    .estoque {
+        font-size: 18px;
+    }
+
+    .tabela th,
+    .tabela td {
+        padding: 8px;
+        font-size: 17px;
+    }
+
+    .quantidade button,
+    .quantidade input {
+        width: 30px;
+        height: 30px;
+        font-size: 14px;
+    }
+
+    input.quantidade-zero {
+        color: red;
+        font-weight: bold;
+    }
+
+    .btnRemover {
+        display: none;
+    }
+
+    #total-geral {
+        font-size: 20px;
+        margin-right: 0;
+        margin-top: 0;
+        text-align: center;
+    }
+
+    .entrega,
+    .cupom,
+    .aplicar-cupom {
+        width: 100%;
+        flex-direction: row;
+        gap: 8px;
+        margin-left: 0;
+    }
+
+    .aplicar-cupom input,
+    .aplicar-cupom button {
+        width: 50%;
+        height: 36px;
+        font-size: 14px;
+    }
+
+    .entregaFrete input {
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .entrega button {
+        width: 30%;
+    }
+
+    .forma-pagamento {
+        font-size: 16px;
+    }
+
+    .forma-pagamento select {
+        width: 100%;
+    }
+
+    .finalizar {
+        width: 100%;
+        padding: 12px;
+        font-size: 14px;
+        margin-left: 0;
+    }
+
+    #detalhes-pagamento input {
+        width: 80%;
+        padding: 8px;
+        font-size: 14px;
+        margin-top: 0;
+    }
+
+    select option {
+        font-size: 13px;
+    }
+
+    #forma-pagamento select option {
+        font-size: 10px;
+    }
+
+    .forma-pagamento {
+        margin: 30px 0 0 0;
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .forma-pagamento select {
+        width: 50%;
+        height: 30px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+
+    .finalizar-compra {
+        display: block;
+        margin-top: 10px;
+    }
+
+    .finalizar {
+        font-size: 15px;
+    }
+
+    #qrcode {
+        width: 40%;
+        height: 40%;
+    }
+
+    .modal-content {
+        padding: 20px;
+        width: 95%;
+    }
+
+    .modal-content button {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .modal-content h2 {
+        font-size: 18px;
+    }
+
+    .modal-content #modal-produto,
+    .modal-content #modal-valor {
+        font-size: 13px;
     }
 }
